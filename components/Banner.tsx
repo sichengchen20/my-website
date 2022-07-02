@@ -32,7 +32,7 @@ export function Banner() {
     <>
       <Center  className='banner'>
         <Container data-aos='fade-up'>
-          <Title order={1} className={classes.title}>&quot;Why am I here again?</Title>
+          <Title order={1} className={classes.title}>&quot;Why am I here again?&quot;</Title>
           <Center><Title order={5} className={classes.subtitle} >Sicheng Chen</Title></Center>
         </Container>
       </Center>
