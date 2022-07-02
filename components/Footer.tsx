@@ -47,7 +47,7 @@ export function Footer() {
                   <BrandYoutube size={25} />
                 </ActionIcon>
               </a>
-              <a target={'_blank'} href={'https://github.com/StrykerPX'}>
+              <a target={'_blank'} rel="noreferrer" href={'https://github.com/StrykerPX'}>
                 <ActionIcon variant='transparent' className={classes.links} size="lg">
                   <BrandGithub size={25} />
                 </ActionIcon>
