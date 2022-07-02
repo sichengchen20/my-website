@@ -107,14 +107,14 @@ const useStyles = createStyles((theme) => {
 export function ContactForm() {
   const { classes } = useStyles();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e:any) => {
     e.preventDefault();
 
     emailjs.sendForm('service_50t33gf', 'template_r1vovzw', e.target, '_rLNYos94lW5lqTi5')
       .then((result) => {
-          console.log(result.text);
+        console.log(result.text);
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
       e.target.reset()
   }
