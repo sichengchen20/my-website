@@ -136,7 +136,7 @@ export function HeaderStatic({ links }: HeaderSearchProps) {
         
         <Container>
           <div className={classes.inner}>
-            <a href="/">
+            <Link href="/">
               <div>
                 <Image
                   width={37}
@@ -144,7 +144,7 @@ export function HeaderStatic({ links }: HeaderSearchProps) {
                   alt="Logo"
                 />
               </div>
-            </a>
+            </Link>
             <Group spacing={5} className={classes.links}>
               {items}
             </Group>
