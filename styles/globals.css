@@ -14,3 +14,88 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.banner {
+  background-image: url('../public/background.png');
+  background-position: center;
+  justify-content: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.background {
+  background-image: url('../public/background_blur.png');
+  background-position: center;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 450px;
+  z-index: -100;
+}
+
+.progress{
+  width: 100%;
+  border-radius: 100px;
+  background-color: #e9ecef;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  height:12px !important;
+}
+
+.progress-bar{
+  background-color: #517dbe !important;
+  transition: 3s all;
+  border-radius: 100px;
+  font-size: 10px;
+  height: 100%;
+}
+
+
+[data-aos="bar-c"] {
+  width: 0%;
+}
+
+[data-aos="bar-c"].aos-animate {
+  width: 70%;
+}
+
+[data-aos="bar-cs"] {
+  width: 0%;
+}
+
+[data-aos="bar-cs"].aos-animate {
+  width: 88%;
+}
+
+[data-aos="bar-java"] {
+  width: 0%;
+}
+
+[data-aos="bar-java"].aos-animate {
+  width: 88%;
+}
+
+[data-aos="bar-html"] {
+  width: 0%;
+}
+
+[data-aos="bar-html"].aos-animate {
+  width: 90%;
+}
+
+[data-aos="bar-css"] {
+  width: 0%;
+}
+
+[data-aos="bar-css"].aos-animate {
+  width: 85%;
+}
+
+[data-aos="bar-javascript"] {
+  width: 0%;
+}
+
+[data-aos="bar-javascript"].aos-animate {
+  width: 75%;
+}
+
