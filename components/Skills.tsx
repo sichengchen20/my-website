@@ -43,13 +43,13 @@ export function Skills() {
               <Grid.Col span={4} className={classes.col}>
                 <Text color={'gray'} className={classes.text}>C</Text>
                 <div className="progress">
-                  <div className="progress-bar" data-aos="bar-c" data-aos-duration="500" role="progressbar" data-aos-delay="50" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div className="progress-bar" data-aos="bar-c" data-aos-duration="500" role="progressbar" data-aos-delay="50"></div>
                 </div>
               </Grid.Col>
               <Grid.Col span={4} className={classes.col}>
                 <Text color={'gray'} className={classes.text}>HTML</Text>
                 <div className="progress">
-                    <div className="progress-bar" data-aos="bar-html" data-aos-duration="500" role="progressbar" data-aos-delay="50" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div className="progress-bar" data-aos="bar-html" data-aos-duration="500" role="progressbar" data-aos-delay="50"></div>
                 </div>
               </Grid.Col>
             </Grid>
@@ -57,13 +57,13 @@ export function Skills() {
               <Grid.Col span={4} className={classes.col}>
               <Text color={'gray'} className={classes.text}>C#</Text>
               <div className="progress">
-                <div className="progress-bar" data-aos="bar-cs" data-aos-duration="500" role="progressbar" data-aos-delay="50" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                <div className="progress-bar" data-aos="bar-cs" data-aos-duration="500" role="progressbar" data-aos-delay="50"></div>
               </div>
               </Grid.Col>
               <Grid.Col span={4} className={classes.col}>
                 <Text color={'gray'} className={classes.text}>CSS</Text>
                 <div className="progress">
-                  <div className="progress-bar" data-aos="bar-css" data-aos-duration="500" role="progressbar" data-aos-delay="50" aria-valuenow="85" aria-valuemin="0" aria-valuemax="75"></div>
+                  <div className="progress-bar" data-aos="bar-css" data-aos-duration="500" role="progressbar" data-aos-delay="50"></div>
                 </div>
               </Grid.Col>
             </Grid>
@@ -71,13 +71,13 @@ export function Skills() {
               <Grid.Col span={4} className={classes.col}>
               <Text color={'gray'} className={classes.text}>Java</Text>
               <div className="progress">
-                <div className="progress-bar" data-aos="bar-java" data-aos-duration="500" role="progressbar" data-aos-delay="50" aria-valuenow="88" aria-valuemin="0" aria-valuemax="75"></div>
+                <div className="progress-bar" data-aos="bar-java" data-aos-duration="500" role="progressbar" data-aos-delay="50"></div>
               </div>
               </Grid.Col>
               <Grid.Col span={4} className={classes.col}>
                 <Text color={'gray'} className={classes.text}>Javascript</Text>
                 <div className="progress">
-                  <div className="progress-bar" data-aos="bar-javascript" data-aos-duration="500" role="progressbar" data-aos-delay="50" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div className="progress-bar" data-aos="bar-javascript" data-aos-duration="500" role="progressbar" data-aos-delay="50"></div>
                 </div>
               </Grid.Col>
             </Grid>
