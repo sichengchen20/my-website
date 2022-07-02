@@ -3,6 +3,7 @@ import { createStyles, Header, Menu, Group, Center, Burger, Drawer, Container, I
 import { useBooleanToggle } from '@mantine/hooks';
 import { useEffect } from "react";
 import { useState } from "react";
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -97,7 +98,7 @@ export function HeaderMenuColored({ links }: HeaderSearchProps) {
           placement="end"
           gutter={1}
           control={
-            <a
+            <Link
               href={link.link}
               className={classes.link}
               onClick={(event) => event.preventDefault()}
@@ -105,7 +106,7 @@ export function HeaderMenuColored({ links }: HeaderSearchProps) {
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
               </Center>
-            </a>
+            </Link>
           }
         >
           {menuItems}
@@ -114,13 +115,12 @@ export function HeaderMenuColored({ links }: HeaderSearchProps) {
     }
 
     return (
-      <a
+      <Link
         key={link.label}
         href={link.link}
-        className={classes.link}
       >
-        {link.label}
-      </a>
+        <a className={classes.link}>{link.label}</a>
+      </Link>
     );
   });
 

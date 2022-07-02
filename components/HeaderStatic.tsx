@@ -1,6 +1,7 @@
 import React from 'react';
 import { createStyles, Header, Menu, Group, Center, Burger, Drawer, Container, Image } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -79,7 +80,7 @@ export function HeaderStatic({ links }: HeaderSearchProps) {
           placement="end"
           gutter={1}
           control={
-            <a
+            <Link
               href={link.link}
               className={classes.link}
               onClick={(event) => event.preventDefault()}
@@ -87,7 +88,7 @@ export function HeaderStatic({ links }: HeaderSearchProps) {
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
               </Center>
-            </a>
+            </Link>
           }
         >
           {menuItems}
@@ -96,13 +97,12 @@ export function HeaderStatic({ links }: HeaderSearchProps) {
     }
 
     return (
-      <a
+      <Link
         key={link.label}
         href={link.link}
-        className={classes.link}
       >
-        {link.label}
-      </a>
+        <a className={classes.link}>{link.label}</a>
+      </Link>
     );
   });
 
