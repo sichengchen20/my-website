@@ -18,10 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Sicheng Chen</title>
-        <meta name="description" content="
-          I am an undergraduate junior at Kansas State University studying Computer Science./n
-          Although there is nothing that I particularly excel at aside from coding, I am willing to dedicate my time towards fixing any flaws that I may have.
-        " />
+        <meta name="description" content="Sicheng's personal website!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

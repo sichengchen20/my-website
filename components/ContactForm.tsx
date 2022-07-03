@@ -1,4 +1,3 @@
-import React, { useRef } from 'react';
 import emailjs from 'emailjs-com'
 import {
   Paper,
@@ -10,7 +9,6 @@ import {
   SimpleGrid,
   createStyles,
   Center,
-  Container
 } from '@mantine/core';
 
 const useStyles = createStyles((theme) => {

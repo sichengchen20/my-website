@@ -5,6 +5,7 @@ import {
   Center,
   Title
 } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 const useStyles = createStyles((theme) => ({
 
@@ -26,14 +27,15 @@ const useStyles = createStyles((theme) => ({
 
 export function Banner() {
 
+  const matches = useMediaQuery('(min-width: 410px)');
   const { classes } = useStyles();
 
   return (
     <>
       <Center  className='banner'>
         <Container data-aos='fade-up'>
-          <Title order={1} className={classes.title}>&quot;Why am I here again?&quot;</Title>
-          <Center><Title order={5} className={classes.subtitle} >Sicheng Chen</Title></Center>
+          <Title order={matches? 1 : 2} className={classes.title}>&quot;Why am I here again?&quot;</Title>
+          <Center><Title order={matches? 5 : 6} className={classes.subtitle} >Sicheng Chen</Title></Center>
         </Container>
       </Center>
     </>

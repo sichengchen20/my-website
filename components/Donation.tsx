@@ -15,6 +15,7 @@ const useStyles = createStyles(() => ({
 
   text: {
     color: '#ffffff',
+    textAlign: 'center'
   }
 }));
 

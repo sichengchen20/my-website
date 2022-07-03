@@ -12,6 +12,22 @@ const useStyles = createStyles(() => ({
     textAlign: 'center'
   },
 
+  hidecols850: {
+    '@media (max-width: 850px)': {
+      display: 'none',
+    },
+  },
+  hidecols650: {
+    '@media (max-width: 650px)': {
+      display: 'none',
+    },
+  },
+  hidecols550: {
+    '@media (max-width: 550px)': {
+      display: 'none',
+    },
+  },
+
   label: {
     textAlign: 'center'
   }
@@ -62,9 +78,9 @@ export function ProjectList() {
           </Center>
         </td>
         <td style={{fontWeight: 'bold'}}>{element.name}</td>
-        <td>{element.language}</td>
-        <td>{element.type}</td>
-        <td>{element.date}</td>
+        <td className={classes.hidecols850}>{element.language}</td>
+        <td className={classes.hidecols650}>{element.type}</td>
+        <td className={classes.hidecols550}>{element.date}</td>
         <td><Badge color={(element.status === 'Complete') ? 'teal' : 'blue'}>{element.status}</Badge></td>
       </tr>
   ));
@@ -77,9 +93,9 @@ export function ProjectList() {
             <tr>
             <th style={{textAlign: 'center'}}></th>
               <th style={{textAlign: 'center'}}>Name</th>
-              <th style={{textAlign: 'center'}}>Language</th>
-              <th style={{textAlign: 'center'}}>Type</th>
-              <th style={{textAlign: 'center'}}>Date</th>
+              <th className={classes.hidecols850} style={{textAlign: 'center'}}>Language</th>
+              <th className={classes.hidecols650} style={{textAlign: 'center'}}>Type</th>
+              <th className={classes.hidecols550} style={{textAlign: 'center'}}>Date</th>
               <th style={{textAlign: 'center'}}>Status</th>
             </tr>
           </thead>
