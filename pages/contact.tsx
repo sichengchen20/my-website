@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { HeaderStatic } from '../components/HeaderStatic'
+import { HeaderMenu } from '../components/HeaderMenu'
 import { ContactForm } from '../components/ContactForm'
 import { Footer } from '../components/Footer';
 import dynamic from "next/dynamic";
@@ -14,7 +14,7 @@ const links = [
 const Contact: NextPage = () => {
   return (
     <>
-      <HeaderStatic links={links} />
+      <HeaderMenu links={links} />
       <ContactForm />
       <Footer />
     </>

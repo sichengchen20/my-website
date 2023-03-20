@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { HeaderStatic } from '../components/HeaderStatic'
+import { HeaderMenu } from '../components/HeaderMenu'
 import { ProjectList } from '../components/ProjectList'
 import { Footer } from '../components/Footer';
 
@@ -13,7 +13,7 @@ const links = [
 const Projects: NextPage = () => {
   return (
     <>
-      <HeaderStatic links={links} />
+      <HeaderMenu links={links} />
       <ProjectList />
       <Footer />
     </>

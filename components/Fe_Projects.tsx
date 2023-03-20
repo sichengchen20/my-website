@@ -1,5 +1,6 @@
 import React from 'react';
-import { createStyles, Center, Container, Grid, Paper, Image, Text } from '@mantine/core';
+import { createStyles, Center, Container, Grid, Paper, Group, Badge, Button, Card, Image, Text } from '@mantine/core';
+import { Carousel } from '@mantine/carousel';
 
 const useStyles = createStyles(() => ({
 
@@ -26,50 +27,96 @@ export function Fe_Prjects() {
     <>
       <div>
         <Container className={classes.container}>
-          <Center><h2 className={classes.title}>Featured Projects</h2></Center>
-          <Grid grow justify='center'>
-            <Grid.Col data-aos='fade-up' md={6} lg={3} className={classes.col}>
-              <a href={'https://github.com/StrykerPX/Chroot'}>
-                <Paper shadow={'sm'} radius={'md'} p={'xl'}>
-                  <Center>
-                    <Image
-                      src='res/projects/chroot.png'
-                      width={75}
-                      radius={5}
-                    />
-                  </Center>
-                  <Center><h3>Chroot</h3></Center>
-                  <Center><Text color={'dimmed'} align={'center'}>Discord bot with many tools and features to help you build your own sever!</Text></Center>
-                </Paper>
-              </a>
-            </Grid.Col>
-            <Grid.Col data-aos='fade-up' data-aos-delay={100} md={6} lg={3} className={classes.col}>
-              <a href={'https://github.com/StrykerPX/Hash-Generator'}>
-                <Paper shadow={'sm'} radius={'md'} p={'xl'}>
-                  <Center><Image
-                    src='res/projects/img_app.png'
-                    width={75}
-                    radius={5}
-                  /></Center>
-                  <Center><h3>Hash Genterator</h3></Center>
-                  <Center><Text color={'dimmed'} align={'center'}>A test software that uses different algorithms to generate hash of an input.</Text></Center>
-                </Paper>
-              </a>
-            </Grid.Col>
-            <Grid.Col data-aos='fade-up' data-aos-delay={200} md={6} lg={3} className={classes.col}>
-              <a href={'https://github.com/StrykerPX/File-Compression'}>
-                <Paper shadow={'sm'} radius={'md'} p={'xl'}>
-                  <Center><Image
-                    src='res/projects/img_app.png'
-                    width={75}
-                    radius={5}
-                  /></Center>
-                  <Center><h3>File Compressor</h3></Center>
-                  <Center><Text color={'dimmed'} align={'center'}>A test software that uses OutputStream class pakage to compress a given file.</Text></Center>
-                </Paper>
-              </a>
-            </Grid.Col>
-          </Grid>
+          <Carousel 
+            slideSize="70%" height={350} slideGap="xl"
+            styles={{
+              control: {
+                '&[data-inactive]': {
+                  opacity: 0,
+                  cursor: 'default',
+                },
+              },
+            }}
+          >
+            <Carousel.Slide>
+              <Card shadow="sm" padding="lg" radius="md" withBorder>
+                <Card.Section>
+                  <Image
+                    src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+                    height={160}
+                  alt="Norway"
+                  />
+                </Card.Section>
+                <Group position="apart" mt="md" mb="xs">
+                  <Text weight={500}>Norway Fjord Adventures</Text>
+                  <Badge color="pink" variant="light">
+                    On Sale
+                  </Badge>
+                </Group>
+
+                <Text size="sm" color="dimmed">
+                  With Fjord Tours you can explore more of the magical fjord landscapes with tours and
+                  activities on and around the fjords of Norway
+                </Text>
+
+                <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+                  Book classic tour now
+                </Button>
+              </Card>
+            </Carousel.Slide>
+            <Carousel.Slide>
+              <Card shadow="sm" padding="lg" radius="md" withBorder>
+                <Card.Section>
+                  <Image
+                    src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+                    height={160}
+                  alt="Norway"
+                  />
+                </Card.Section>
+                <Group position="apart" mt="md" mb="xs">
+                  <Text weight={500}>Norway Fjord Adventures</Text>
+                  <Badge color="pink" variant="light">
+                    On Sale
+                  </Badge>
+                </Group>
+
+                <Text size="sm" color="dimmed">
+                  With Fjord Tours you can explore more of the magical fjord landscapes with tours and
+                  activities on and around the fjords of Norway
+                </Text>
+
+                <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+                  Book classic tour now
+                </Button>
+              </Card>
+            </Carousel.Slide>
+            <Carousel.Slide>
+              <Card shadow="sm" padding="lg" radius="md" withBorder>
+                <Card.Section>
+                  <Image
+                    src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+                    height={160}
+                  alt="Norway"
+                  />
+                </Card.Section>
+                <Group position="apart" mt="md" mb="xs">
+                  <Text weight={500}>Norway Fjord Adventures</Text>
+                  <Badge color="pink" variant="light">
+                    On Sale
+                  </Badge>
+                </Group>
+
+                <Text size="sm" color="dimmed">
+                  With Fjord Tours you can explore more of the magical fjord landscapes with tours and
+                  activities on and around the fjords of Norway
+                </Text>
+
+                <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+                  Book classic tour now
+                </Button>
+              </Card>
+            </Carousel.Slide>
+          </Carousel>
         </Container>
       </div>  
     </>

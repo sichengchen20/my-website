@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { HeaderMenuColored } from '../components/Header'
+import { HeaderMenu } from '../components/HeaderMenu'
 import { Banner } from '../components/Banner'
 import { About } from '../components/About'
 import { Skills } from '../components/Skills';
@@ -18,7 +18,7 @@ const links = [
 const Home: NextPage = () => {
   return (
     <>
-      <HeaderMenuColored links={links} />
+      <HeaderMenu links={links} />
       <Banner />
       <About />
       <Skills />

@@ -67,7 +67,7 @@ const useStyles = createStyles((theme) => {
     contacts: {
       boxSizing: 'border-box',
       position: 'relative',
-      borderRadius: theme.radius.lg - 2,
+      borderRadius: +(theme.radius.lg) - 2,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       border: '1px solid transparent',
@@ -81,7 +81,7 @@ const useStyles = createStyles((theme) => {
     },
 
     title: {
-      marginBottom: theme.spacing.xl * 1.5,
+      marginBottom: +(theme.spacing.xl) * 1.5,
       fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
       [BREAKPOINT]: {

@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  createStyles,
-  Container,
-  Center,
-  Title
-} from '@mantine/core';
+import { createStyles, Container, Center,Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 
 const useStyles = createStyles((theme) => ({
