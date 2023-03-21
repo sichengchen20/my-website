@@ -36,17 +36,17 @@ const useStyles = createStyles(() => ({
 const elements = [
   { 
     image: 'res/projects/img_app.png',
-    name: 'Hash Generator', language: 'C#',
-    type: 'application', date: '01/24/2022',
+    name: 'Map Viewer', language: 'C#',
+    type: 'application', date: '10/16/2021',
     status: 'Complete',
-    link: 'https://github.com/StrykerPX/Hash-Generator'
+    link: 'https://github.com/StrykerPX/Map-Viewer'
   },
 
   { 
     image: 'res/projects/img_app.png',
-    name: 'File Compressor', language: 'Java',
-    type: 'application', date: '01/24/2022',
-    status: 'Complete',
+    name: 'Project Name', language: 'N/A',
+    type: 'N/A', date: '01/01/2023',
+    status: 'In progress',
     link: 'https://github.com/StrykerPX/File-Compression'
   },
 

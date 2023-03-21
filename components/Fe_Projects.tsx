@@ -28,39 +28,32 @@ export function Fe_Prjects() {
       <div>
         <Container className={classes.container}>
           <Carousel 
-            slideSize="70%" height={350} slideGap="xl"
-            styles={{
-              control: {
-                '&[data-inactive]': {
-                  opacity: 0,
-                  cursor: 'default',
-                },
-              },
-            }}
+            slideSize="50%"
+            height={350}
+            slideGap="xl" loop
           >
             <Carousel.Slide>
               <Card shadow="sm" padding="lg" radius="md" withBorder>
                 <Card.Section>
                   <Image
-                    src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+                    src="MapViewer.png"
                     height={160}
                   alt="Norway"
                   />
                 </Card.Section>
                 <Group position="apart" mt="md" mb="xs">
-                  <Text weight={500}>Norway Fjord Adventures</Text>
-                  <Badge color="pink" variant="light">
-                    On Sale
+                  <Text weight={500}>Map Viewer</Text>
+                  <Badge color="teal" variant="light">
+                    Complete
                   </Badge>
                 </Group>
 
                 <Text size="sm" color="dimmed">
-                  With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-                  activities on and around the fjords of Norway
+                  MapViewer is a .NET Framework application that displays map of a particular location using QuadTree data structure by taking CSV file as an input.
                 </Text>
 
                 <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-                  Book classic tour now
+                  View project
                 </Button>
               </Card>
             </Carousel.Slide>
@@ -74,9 +67,9 @@ export function Fe_Prjects() {
                   />
                 </Card.Section>
                 <Group position="apart" mt="md" mb="xs">
-                  <Text weight={500}>Norway Fjord Adventures</Text>
-                  <Badge color="pink" variant="light">
-                    On Sale
+                  <Text weight={500}>Project Name</Text>
+                  <Badge color="teal" variant="light">
+                    Complete
                   </Badge>
                 </Group>
 
@@ -86,7 +79,7 @@ export function Fe_Prjects() {
                 </Text>
 
                 <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-                  Book classic tour now
+                View project
                 </Button>
               </Card>
             </Carousel.Slide>
@@ -100,9 +93,9 @@ export function Fe_Prjects() {
                   />
                 </Card.Section>
                 <Group position="apart" mt="md" mb="xs">
-                  <Text weight={500}>Norway Fjord Adventures</Text>
-                  <Badge color="pink" variant="light">
-                    On Sale
+                  <Text weight={500}>Project Name</Text>
+                  <Badge color="teal" variant="light">
+                  Complete
                   </Badge>
                 </Group>
 
@@ -112,7 +105,7 @@ export function Fe_Prjects() {
                 </Text>
 
                 <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-                  Book classic tour now
+                View project
                 </Button>
               </Card>
             </Carousel.Slide>
