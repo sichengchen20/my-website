@@ -50,7 +50,7 @@ export function Fe_Prjects() {
   const { classes } = useStyles();
 
   const projects = elements.map((element) => (
-    <Carousel.Slide>
+    <Carousel.Slide key={element.name}>
       <Card shadow="sm" padding="lg" radius="md" withBorder>
         <CardSection>
         <Image
