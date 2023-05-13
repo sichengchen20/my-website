@@ -56,7 +56,6 @@ export function Fe_Prjects() {
         <Image
           src={element.image}
           height={160}
-          alt="Norway"
         />
         </CardSection>
         <Group position="apart" mt="md" mb="xs">

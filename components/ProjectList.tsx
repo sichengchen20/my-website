@@ -1,5 +1,7 @@
-import React from 'react';
-import { createStyles, Container, Center, Table, Image, Badge } from '@mantine/core';
+import React, { useRef } from 'react';
+import { createStyles, Container, Center, Table, Image, Badge, Modal, Grid, Skeleton, ThemeIcon, rem, Group, Button, Text, RingProgress } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+import { Carousel } from '@mantine/carousel';
 
 const useStyles = createStyles(() => ({
 
@@ -62,12 +64,13 @@ const elements = [
 ];
 
 export function ProjectList() {
-
+  
+  const [opened, { open, close }] = useDisclosure(false);
   const { classes } = useStyles();
 
   const rows = elements.map((element) => (
     
-      <tr key={element.name} onClick={(e) => {e.preventDefault; location.href=element.link;}}>
+      <tr style={{cursor: 'pointer'}} key={element.name} onClick={open}>
         <td>
           <Center>
             <Image
@@ -88,6 +91,60 @@ export function ProjectList() {
   return (
     <>
       <Container className={classes.background}>
+        <Modal opened={opened} onClose={close} size="55%" title=" " centered>
+          <Center>
+            <Carousel 
+              maw={425}
+              slideGap="xs"
+              height={300}
+              loop
+              >
+              <Carousel.Slide>
+                <div>
+                  <Image
+                    src='res/projects/acm_website.png'
+                    height={300}
+                    width={425}
+                    alt="Norway"
+                  />
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <div>
+                    <Image
+                      src='res/projects/acm_website.png'
+                      height={300}
+                      width={425}
+                      alt="Norway"
+                    />
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <div>
+                    <Image
+                      src='res/projects/acm_website.png'
+                      height={300}
+                      width={425}
+                      alt="Norway"
+                    />
+                </div>
+              </Carousel.Slide>
+            </Carousel>
+          </Center>
+          <Group position="apart" mt="md" mb="xs" px="lg">
+            <Text size="lg" weight={600}>Test Project</Text>
+            <Badge size="md" color={'blue'}>
+              In Progress
+            </Badge>
+            <Text size="sm" color="dimmed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </Text>
+            <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+              View Repository
+            </Button>
+        </Group>
+        </Modal>
+
         <Table highlightOnHover className={classes.list} verticalSpacing={'xs'}>
           <thead>
             <tr>
