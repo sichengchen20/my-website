@@ -1,12 +1,19 @@
 import { createStyles, Header, Menu, Group, Center, Burger, Container, Image, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { useEffect } from "react";
+import { useState } from "react";
 import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   header: {
+    backgroundColor: 'transparent',
     WebkitTransition: 'all 0.2s',
     position: 'fixed',
     borderBottom: 0,
+  },
+
+  active: {
+    backgroundColor: '#396dbc',
   },
 
   inner: {
@@ -34,12 +41,12 @@ const useStyles = createStyles((theme) => ({
     padding: `${rem(8)} ${rem(12)}`,
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[0],
     fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
+    fontWeight: 'bold',
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : '#3064b2',
     },
   },
 
@@ -54,7 +61,20 @@ interface HeaderSearchProps {
 
 export function HeaderMenu({ links }: HeaderSearchProps) {
   const [opened, { toggle }] = useDisclosure(false);
-  const { classes } = useStyles();
+  const [active, setActive] = useState(1);
+  const { classes, cx } = useStyles();
+
+  useEffect(() => {
+    window.onscroll = function(){
+      var top = window.scrollY;
+
+      if(top >= 200){
+        setActive(0)
+      }else{
+        setActive(1)
+      }
+    }
+  }, [])
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
@@ -91,7 +111,7 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
   });
 
   return (
-    <Header className={classes.header} height={56} mb={120}>
+    <Header className={cx(classes.header, { [classes.active]: active === 0 })} height={56} mb={120}>
       <Container>
         <div className={classes.inner}>
             <Link href="/">
@@ -106,7 +126,7 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
           <Group spacing={5} className={classes.links}>
             {items}
           </Group>
-          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
+          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" color='#ffffff' />
         </div>
       </Container>
     </Header>

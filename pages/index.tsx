@@ -11,8 +11,8 @@ import dynamic from "next/dynamic";
 const links = [
   { link: '#', label: 'Home' },
   { link: '/projects', label: 'Projects' },
+  { link: '/resume', label: 'Resume' },
   { link: '/contact', label: 'Contact' },
-  { link: '/login', label: 'Login' }
 ] as { link: string; label: string; links: { link: string; label: string }[] }[];
 
 const Home: NextPage = () => {
@@ -21,7 +21,6 @@ const Home: NextPage = () => {
       <HeaderMenu links={links} />
       <Banner />
       <About />
-      <Skills />
       <Fe_Prjects />
       <Donation />
       <Footer />

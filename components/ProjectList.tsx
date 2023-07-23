@@ -46,10 +46,10 @@ const elements = [
 
   { 
     image: 'res/projects/img_app.png',
-    name: 'Project Name', language: 'N/A',
+    name: 'ACM Website', language: 'N/A',
     type: 'N/A', date: '01/01/2023',
-    status: 'In progress',
-    link: 'https://github.com/StrykerPX/File-Compression'
+    status: 'Complete',
+    link: 'https://acm.cs.ksu.edu/'
   },
 
   { 
@@ -91,7 +91,7 @@ export function ProjectList() {
   return (
     <>
       <Container className={classes.background}>
-        <Modal opened={opened} onClose={close} size="55%" title=" " centered>
+        <Modal opened={opened} onClose={close} size="40%" title=" " centered>
           <Center>
             <Carousel 
               maw={425}
@@ -137,7 +137,8 @@ export function ProjectList() {
               In Progress
             </Badge>
             <Text size="sm" color="dimmed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </Text>
             <Button variant="light" color="blue" fullWidth mt="md" radius="md">
               View Repository

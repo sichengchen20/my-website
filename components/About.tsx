@@ -18,7 +18,7 @@ const useStyles = createStyles((theme) => ({
 
   container: {
     paddingTop: 100,
-    paddingBottom: 25,
+    paddingBottom: 100,
   },
 
   profile: {
@@ -31,6 +31,8 @@ const useStyles = createStyles((theme) => ({
 
   text: {
     color: theme.colors.dark[3],
+    fontSize: '16px',
+    lineHeight: 2,
   },
 }));
 
@@ -54,17 +56,19 @@ export function About() {
                   src="profile.png"
                   alt="Profile"
                   radius={150}
-                  />
+                />
               </Center>
             </Grid.Col>
-            <MediaQuery smallerThan={'md'} styles={profileStyle}><Grid.Col className={classes.introduction} md={6} lg={6}>
-              <h2>Introduction</h2>
-              <Text align='justify' className={classes.text}>
-                <p>I am an undergraduate junior at Kansas State University studying Computer Science.
-                  Although there is nothing that I particularly excel at aside from coding, I am willing to dedicate my time towards fixing any flaws that I may have.</p>
-                <p>I spend the majority of my free time on personal projects, trying to improve upon what I’ve learned throughout the years.</p>
-              </Text>
-            </Grid.Col></MediaQuery>
+              <MediaQuery smallerThan={'md'} styles={profileStyle}>
+                <Grid.Col className={classes.introduction} md={6} lg={6}>
+                  <h1>Introduction</h1>
+                  <Text align='left' className={classes.text}>
+                    <p>Hi, I'm Sicheng Chen! A senior pursuing his degree in Computer Science at Kansas State University.
+                    Throughout my academic journey, I've had the opportunity to work on several personal and internship projects that honed my skills and expertise.
+                    As graduation approaches, I hope to find new opportunities which can kickstart my career in the industry.</p>
+                  </Text>
+                </Grid.Col>
+              </MediaQuery>
           </Grid>
         </Container>
       </div>  

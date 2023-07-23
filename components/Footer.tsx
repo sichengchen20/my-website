@@ -1,11 +1,11 @@
 import React from 'react';
-import { createStyles, Container, Anchor, Group, ActionIcon, Center } from '@mantine/core';
-import { BrandYoutube, BrandTwitter, BrandGithub } from 'tabler-icons-react';
+import { createStyles, Container, Group, ActionIcon, Center } from '@mantine/core';
+import { BrandYoutube, BrandTwitter, BrandGithub, BrandLinkedin, BrandMailgun, BrandGmail, BrandMantine } from 'tabler-icons-react';
 
 const useStyles = createStyles((theme) => ({
 
   section: {
-    backgroundColor: theme.colors.dark[6],
+    backgroundColor: theme.colors.dark[8],
   },
 
   inner: {
@@ -37,19 +37,19 @@ export function Footer() {
         <Container className={classes.inner}>
           <Center>
             <Group spacing={0} position="right" noWrap>
-              <a>
+              <a target={'_blank'} rel="noreferrer" href={''}>
                 <ActionIcon variant='transparent' className={classes.links} size="lg">
-                  <BrandTwitter size={25} />
-                </ActionIcon>
-              </a>
-              <a>
-                <ActionIcon variant='transparent' className={classes.links} size="lg">
-                  <BrandYoutube size={25} />
+                  <BrandLinkedin size={25} />
                 </ActionIcon>
               </a>
               <a target={'_blank'} rel="noreferrer" href={'https://github.com/StrykerPX'}>
                 <ActionIcon variant='transparent' className={classes.links} size="lg">
                   <BrandGithub size={25} />
+                </ActionIcon>
+              </a>
+              <a target={'_blank'} rel="noreferrer"  href={'mailto:sicheng@ksu.edu'}>
+                <ActionIcon variant='transparent' className={classes.links} size="lg">
+                  <BrandGmail size={25} />
                 </ActionIcon>
               </a>
             </Group>
@@ -58,7 +58,7 @@ export function Footer() {
       </div>
       <div className={classes.text}>
         <Center>
-          <p>© 2022 Sicheng Chen. All rights reserved.</p>
+          <p>© 2023 Sicheng Chen. All rights reserved.</p>
         </Center>
       </div>
     </div>

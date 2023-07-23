@@ -90,10 +90,10 @@ const useStyles = createStyles((theme) => {
     },
 
     control: {
-      backgroundColor: '#517dbe',
+      backgroundColor: '#396dbc',
       transition: '0.05s',
       '&:hover': {
-        backgroundColor: '#476ba0'
+        backgroundColor: '#3064b2'
       },
       [BREAKPOINT]: {
         flex: 1,

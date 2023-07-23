@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyles, Center, Container, Grid, Paper, Group, Badge, Button, Card, Image, Text, CardSection } from '@mantine/core';
+import { createStyles, Container, Group, Badge, Button, Card, Image, Text, CardSection } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import Link from 'next/link';
 
@@ -10,12 +10,20 @@ const useStyles = createStyles(() => ({
     paddingBottom: 150,
   },
 
+  h2: {
+    textAlign: 'center',
+  },
+
   title: {
     paddingBottom: 10,
   },
 
   col: {
     margin: 5
+  },
+
+  carousel: {
+    paddingTop: 16,
   }
 
 }));
@@ -84,7 +92,9 @@ export function Fe_Prjects() {
     <>
       <div>
         <Container className={classes.container}>
+        <h1 className={classes.h2}>Featured Projects</h1>
           <Carousel 
+            className={classes.carousel}
             slideSize="50%"
             height={350}
             slideGap="xl" loop
