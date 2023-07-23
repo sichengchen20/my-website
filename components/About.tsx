@@ -63,8 +63,8 @@ export function About() {
                 <Grid.Col className={classes.introduction} md={6} lg={6}>
                   <h1>Introduction</h1>
                   <Text align='left' className={classes.text}>
-                    <p>Hi, I'm Sicheng Chen! A senior pursuing his degree in Computer Science at Kansas State University.
-                    Throughout my academic journey, I've had the opportunity to work on several personal and internship projects that honed my skills and expertise.
+                    <p>Hi, I&rsquo;m Sicheng Chen! A senior pursuing his degree in Computer Science at Kansas State University.
+                    Throughout my academic journey, I&rsquo;ve had the opportunity to work on several personal and internship projects that honed my skills and expertise.
                     As graduation approaches, I hope to find new opportunities which can kickstart my career in the industry.</p>
                   </Text>
                 </Grid.Col>
