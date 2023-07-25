@@ -37,7 +37,7 @@ export function Footer() {
         <Container className={classes.inner}>
           <Center>
             <Group spacing={0} position="right" noWrap>
-              <a target={'_blank'} rel="noreferrer" href={''}>
+              <a target={'_blank'} rel="noreferrer" href={'https://www.linkedin.com/in/sicheng-chen-a84227225'}>
                 <ActionIcon variant='transparent' className={classes.links} size="lg">
                   <BrandLinkedin size={25} />
                 </ActionIcon>

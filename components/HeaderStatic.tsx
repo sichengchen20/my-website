@@ -1,4 +1,4 @@
-import { createStyles, Header, Menu, Group, Center, Burger, Container, Image, rem } from '@mantine/core';
+import { createStyles, Header, Menu, Group, Center, Burger, Container, Image, rem, Drawer, Divider } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Link from 'next/link';
 
@@ -29,6 +29,12 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  hiddenDesktop: {
+    [theme.fn.largerThan('sm')]: {
+      display: 'none',
+    },
+  },
+
   link: {
     display: 'block',
     lineHeight: 1,
@@ -44,6 +50,29 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  burg_link: {
+    display: 'block',
+    lineHeight: 1,
+    padding: `${rem(8)} ${rem(12)}`,
+    borderRadius: theme.radius.sm,
+    textDecoration: 'none',
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.dark[8],
+    fontSize: theme.fontSizes.sm,
+    fontWeight: 'bold',
+
+    [theme.fn.smallerThan('sm')]: {
+      height: rem(42),
+      display: 'flex',
+      alignItems: 'center',
+      width: '100%',
+    },
+
+    '&:hover': {
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : '#3064b2',
+      color: "#ffffff"
+    },
+  },
+
   linkLabel: {
     marginRight: rem(5),
   },
@@ -54,9 +83,9 @@ interface HeaderSearchProps {
 }
 
 export function HeaderStatic({ links }: HeaderSearchProps) {
-  const [opened, { toggle }] = useDisclosure(false);
-  const { classes } = useStyles();
-
+  const [opened, { toggle, close }] = useDisclosure(false);
+  const { classes, theme } = useStyles();
+  
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
       <Menu.Item key={item.link}>{item.label}</Menu.Item>
@@ -110,6 +139,37 @@ export function HeaderStatic({ links }: HeaderSearchProps) {
           <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" color='#ffffff' />
         </div>
       </Container>
+      <Drawer
+        opened={opened}
+        onClose={close}
+        size={'100%'}
+        padding="md"
+        title="Navigation"
+        className={classes.hiddenDesktop}
+        zIndex={1000000}
+      >
+        <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.3'} />
+        <Link href="/">
+          <a className={classes.burg_link}>
+            Home
+          </a>
+        </Link>
+        <Link href="/projects">
+          <a className={classes.burg_link}>
+            Projects
+          </a>
+        </Link>
+        <Link href="/resume">
+          <a className={classes.burg_link}>
+            Resume
+          </a>
+        </Link>
+        <Link href="/contact">
+          <a className={classes.burg_link}>
+            Contact
+          </a>
+        </Link>
+      </Drawer>
     </Header>
   );
 }
