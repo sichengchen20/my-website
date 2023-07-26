@@ -21,6 +21,10 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: 100,
   },
 
+  h2: {
+    fontSize: '28px',
+  },
+
   profile: {
     paddingTop: 50
   },
@@ -61,9 +65,9 @@ export function About() {
             </Grid.Col>
               <MediaQuery smallerThan={'md'} styles={profileStyle}>
                 <Grid.Col className={classes.introduction} md={6} lg={6}>
-                  <h1>Introduction</h1>
+                  <h2 className={classes.h2}>Introduction</h2>
                   <Text align='left' className={classes.text}>
-                    <p>Hi, I&rsquo;m Sicheng Chen! A senior pursuing his degree in Computer Science at Kansas State University.
+                    <p>Hi, I&rsquo;m Sicheng Chen, A senior pursuing his degree in Computer Science at Kansas State University.
                     Throughout my academic journey, I&rsquo;ve had the opportunity to work on several personal and internship projects that honed my skills and expertise.
                     As graduation approaches, I hope to find new opportunities which can kickstart my career in the industry.</p>
                   </Text>

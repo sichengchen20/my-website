@@ -155,10 +155,10 @@ export function ContactForm() {
                 <Textarea
                   mt="md"
                   name='message'
-                  label="Your message"
                   placeholder="Please include all relevant information"
                   variant="filled"
                   minRows={3}
+                  required
                 />
 
                 <Group position="right" mt="md">

@@ -12,6 +12,7 @@ const useStyles = createStyles(() => ({
 
   h2: {
     textAlign: 'center',
+    fontSize: '28px',
   },
 
   title: {
@@ -49,6 +50,7 @@ const elements = [
     image: 'res/projects/MapViewer.png',
     name: 'Map Viewer',
     status: 'Complete',
+    description: 'A Windows application that takes CSV file as an input and draw out a map using QuadTree data structure.',
     link: 'https://github.com/StrykerPX/Map-Viewer'
   },
 
@@ -58,6 +60,7 @@ const elements = [
     language: 'Javascript',
     type: 'Bot',
     status: 'In progress',
+    description: 'Personal Discord bot with programmer-friendly features. It uses Github API to fetch repository information, etc.',
     link: 'https://github.com/StrykerPX/Chroot'
   },
 
@@ -65,6 +68,7 @@ const elements = [
     image: 'res/projects/acm_website.PNG',
     name: 'ACM Website',
     status: 'Complete',
+    description: 'Offical Association for Computing Machinery (ACM) website for the Kansas State University.',
     link: 'https://acm.cs.ksu.edu/'
   },
 ];
@@ -90,8 +94,7 @@ export function Fe_Prjects() {
         </Group>
 
         <Text className={classes.hidecols850} size="sm" color="dimmed">
-          With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-          activities on and around the fjords of Norway
+          {element.description}
         </Text>
           <Link
             href={element.link}
@@ -108,7 +111,7 @@ export function Fe_Prjects() {
     <>
       <div>
         <Container className={classes.container}>
-        <h1 className={classes.h2}>Featured Projects</h1>
+        <h2 className={classes.h2}>Featured Projects</h2>
           <Carousel 
             className={classes.carousel}
             slideSize="50%"
