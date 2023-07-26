@@ -24,7 +24,23 @@ const useStyles = createStyles(() => ({
 
   carousel: {
     paddingTop: 16,
-  }
+  },
+
+  hidecols850: {
+    '@media (max-width: 850px)': {
+      display: 'none',
+    },
+  },
+  hidecols650: {
+    '@media (max-width: 650px)': {
+      display: 'none',
+    },
+  },
+  hidecols550: {
+    '@media (max-width: 550px)': {
+      display: 'none',
+    },
+  },
 
 }));
 
@@ -46,7 +62,7 @@ const elements = [
   },
 
   { 
-    image: 'res/projects/acm_website.png',
+    image: 'res/projects/acm_website.PNG',
     name: 'ACM Website',
     status: 'Complete',
     link: 'https://acm.cs.ksu.edu/'
@@ -68,12 +84,12 @@ export function Fe_Prjects() {
         </CardSection>
         <Group position="apart" mt="md" mb="xs">
           <Text weight={500}>{element.name}</Text>
-          <Badge  color={(element.status === 'Complete') ? 'teal' : 'blue'}>
+          <Badge className={classes.hidecols850} color={(element.status === 'Complete') ? 'teal' : 'blue'}>
             {element.status}
           </Badge>
         </Group>
 
-        <Text size="sm" color="dimmed">
+        <Text className={classes.hidecols850} size="sm" color="dimmed">
           With Fjord Tours you can explore more of the magical fjord landscapes with tours and
           activities on and around the fjords of Norway
         </Text>
@@ -98,6 +114,10 @@ export function Fe_Prjects() {
             slideSize="50%"
             height={350}
             slideGap="xl" loop
+            breakpoints={[
+              { maxWidth: 'md', slideSize: '50%' },
+              { maxWidth: 'sm', slideSize: '100%', slideGap: 0 },
+            ]}
           >
             {projects}
           </Carousel>

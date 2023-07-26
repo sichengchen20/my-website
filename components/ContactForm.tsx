@@ -27,6 +27,22 @@ const useStyles = createStyles((theme) => {
       height: '85vh'
     },
 
+    hidecols850: {
+      '@media (max-width: 850px)': {
+        display: 'none',
+      },
+    },
+    hidecols650: {
+      '@media (max-width: 650px)': {
+        display: 'none',
+      },
+    },
+    hidecols550: {
+      '@media (max-width: 550px)': {
+        display: 'none',
+      },
+    },
+
     form: {
       boxSizing: 'border-box',
       flex: 1,
@@ -130,17 +146,18 @@ export function ContactForm() {
 
               <div className={classes.fields}>
                 <SimpleGrid cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
-                  <TextInput name='name' label="Name" placeholder="Name" />
-                  <TextInput name='email' label="Email" placeholder="example@pogmail.com" required />
+                  <TextInput className={classes.hidecols650} name='name' placeholder="Name" variant="filled" />
+                  <TextInput name='email' placeholder="Email" variant="filled" required />
                 </SimpleGrid>
 
-                <TextInput mt="md" name='subject' label="Subject" placeholder="Subject" required />
+                <TextInput mt="md" name='subject' placeholder="Subject" variant="filled" required />
 
                 <Textarea
                   mt="md"
                   name='message'
                   label="Your message"
                   placeholder="Please include all relevant information"
+                  variant="filled"
                   minRows={3}
                 />
 
